@@ -1,0 +1,135 @@
+:root {
+  --primary-black: #353535;
+  --primary-white: #fff;
+  --font-primary: Inter;
+  --primary-border-radius: 2.5rem;
+  --primary-background: rgba(255, 255, 255, 0.484);
+  --primary-backdrop-blur: 2rem;
+}
+
+.app-wrapper {
+  background-color: #ffec99;
+  background-image: radial-gradient(
+      at 20% 57%,
+      hsla(277, 69%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 34% 91%, hsla(302, 64%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 3%, hsla(204, 80%, 62%, 1) 0px, transparent 50%),
+    radial-gradient(at 87% 78%, hsla(253, 66%, 69%, 1) 0px, transparent 50%),
+    radial-gradient(at 62% 71%, hsla(75, 75%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 15% 1%, hsla(247, 64%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 69% 29%, hsla(190, 79%, 65%, 1) 0px, transparent 50%);
+  min-height: 100vh;
+  width: 100%;
+  padding: 2.5rem;
+}
+
+.header-primary {
+  color: var(--primary-white);
+  font-family: Quicksand, Inter;
+  font-size: 3em;
+}
+
+.search-input {
+  background-color: var(--primary-white);
+  width: 40%;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5em;
+  background-color: var(--primary-background);
+  backdrop-filter: blur(var(--primary-backdrop-blur));
+}
+
+.search-input input {
+  height: 3.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  font-family: var(--font-primary);
+  color: var(--primary-black);
+  font-size: 1rem;
+  padding-left: 0.3em;
+  background-color: transparent;
+}
+
+.weather-cards-holder {
+  display: flex;
+}
+
+.search-button {
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  height: 3.75rem;
+  font-family: Inter;
+  color: var(--primary-black);
+  font-size: 1rem;
+  background-color: var(--primary-background);
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+.search-input-holder {
+  display: flex;
+  align-items: center;
+}
+
+.recent-searches-holder {
+  width: 100%;
+}
+
+.no-api-key-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--primary-white);
+  text-align: center;
+}
+.no-api-key-view h1,
+h3 {
+  font-weight: normal;
+  color: #202020;
+  font-family: Inter;
+}
+
+@media only screen and (max-width: 1024px) {
+  .weather-cards-holder,
+  .recent-searches-holder {
+    flex-direction: column;
+  }
+
+  .recent-searches-holder {
+    margin-top: 2rem;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .search-input-holder {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .app-wrapper {
+    padding: 1.5rem;
+  }
+
+  .search-button {
+    height: 3rem;
+  }
+
+  .header-primary {
+    font-size: 2.5rem;
+  }
+}
